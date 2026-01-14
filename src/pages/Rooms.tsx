@@ -89,7 +89,7 @@ export function Rooms() {
 
             <div className="relative">
               <img
-                src="https://images.unsplash.com/photo-1590490360182-c33d57733427?w=800&q=80"
+                src="/rooms/deluxe-room/deluxe-room3.avif"
                 alt="Room interior"
                 className="rounded-sm shadow-xl w-full"
               />
