@@ -38,16 +38,6 @@ export const DISTANCES = [
 
 export const ROOMS = [
   {
-    id: 'semi-deluxe',
-    name: 'Semi Deluxe Room',
-    subtitle: 'Cozy Comfort',
-    bestFor: 'Solo Travelers & Budget Stays',
-    description: 'A comfortable and well-appointed room with all essential amenities for a pleasant stay in Shimla.',
-    amenities: ['Double bed', 'Attached Bathroom', 'TV with cable', 'Room Service', 'Free Wi-Fi'],
-    image: 'https://images.unsplash.com/photo-1590490360182-c33d57733427?w=800&q=80',
-    featured: false,
-  },
-  {
     id: 'deluxe',
     name: 'Deluxe Room',
     subtitle: 'Comfortable Stay',
