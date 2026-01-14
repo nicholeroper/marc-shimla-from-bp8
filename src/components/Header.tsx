@@ -54,17 +54,11 @@ export function Header() {
         <div className="container-custom px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
             <Link to="/" className="flex items-center gap-3">
-              <div className={`w-12 h-12 rounded-sm bg-gradient-to-br from-primary-600 to-gold-500 flex items-center justify-center`}>
-                <span className="text-white font-serif text-2xl font-bold">M</span>
-              </div>
-              <div>
-                <h1 className={`font-serif text-xl font-semibold ${logoColor} transition-colors`}>
-                  Hotel Marc
-                </h1>
-                <p className={`text-xs ${isScrolled || !isHomePage ? 'text-slate-500' : 'text-white/80'} transition-colors`}>
-                  Shimla
-                </p>
-              </div>
+              <img
+                src="/logo/logo.svg"
+                alt="Hotel Marc Logo"
+                className="h-14 w-auto"
+              />
             </Link>
 
             <nav className="hidden lg:flex items-center gap-8">
@@ -117,12 +111,11 @@ export function Header() {
         >
           <div className="p-6">
             <div className="flex items-center justify-between mb-8">
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-sm bg-gradient-to-br from-primary-600 to-gold-500 flex items-center justify-center">
-                  <span className="text-white font-serif text-xl font-bold">M</span>
-                </div>
-                <span className="font-serif text-lg font-semibold text-primary-700">Hotel Marc</span>
-              </div>
+              <img
+                src="/logo/logo.svg"
+                alt="Hotel Marc Logo"
+                className="h-12 w-auto"
+              />
               <button
                 onClick={() => setIsMobileMenuOpen(false)}
                 className="p-2 text-slate-600 hover:text-slate-900"
