@@ -53,12 +53,20 @@ export function Header() {
       <header className={`fixed w-full z-50 transition-all duration-300 ${headerBg} ${isScrolled ? 'top-0' : 'lg:top-10 top-0'}`}>
         <div className="container-custom px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
-            <Link to="/" className="flex items-center gap-3">
+            <Link to="/" className="flex items-center gap-2">
               <img
                 src="/logo/logo.svg"
                 alt="Hotel Marc Logo"
-                className="h-14 w-auto"
+                className="h-12 w-auto"
               />
+              <div>
+                <h1 className={`font-serif text-xl font-semibold ${logoColor} transition-colors`}>
+                  Hotel Marc
+                </h1>
+                <p className={`text-xs ${isScrolled || !isHomePage ? 'text-slate-500' : 'text-white/80'} transition-colors`}>
+                  Shimla
+                </p>
+              </div>
             </Link>
 
             <nav className="hidden lg:flex items-center gap-8">
@@ -111,11 +119,14 @@ export function Header() {
         >
           <div className="p-6">
             <div className="flex items-center justify-between mb-8">
-              <img
-                src="/logo/logo.svg"
-                alt="Hotel Marc Logo"
-                className="h-12 w-auto"
-              />
+              <div className="flex items-center gap-2">
+                <img
+                  src="/logo/logo.svg"
+                  alt="Hotel Marc Logo"
+                  className="h-10 w-auto"
+                />
+                <span className="font-serif text-lg font-semibold text-primary-700">Hotel Marc</span>
+              </div>
               <button
                 onClick={() => setIsMobileMenuOpen(false)}
                 className="p-2 text-slate-600 hover:text-slate-900"

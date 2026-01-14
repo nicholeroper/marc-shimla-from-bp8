@@ -8,12 +8,16 @@ export function Footer() {
       <div className="container-custom section-padding">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           <div>
-            <div className="mb-6">
+            <div className="flex items-center gap-2 mb-6">
               <img
                 src="/logo/logo.svg"
                 alt="Hotel Marc Logo"
-                className="h-14 w-auto brightness-0 invert"
+                className="h-12 w-auto brightness-0 invert"
               />
+              <div>
+                <h3 className="font-serif text-xl font-semibold">Hotel Marc</h3>
+                <p className="text-sm text-slate-400">Shimla</p>
+              </div>
             </div>
             <p className="text-slate-400 text-sm leading-relaxed mb-6">
               {HOTEL_INFO.tagline}
