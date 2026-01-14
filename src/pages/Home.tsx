@@ -206,7 +206,7 @@ export function Home() {
           >
             <div className="relative">
               <img
-                src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&q=80"
+                src="/rest1.jpg"
                 alt="Marc Kitchen dining area"
                 className="rounded-sm shadow-xl w-full"
               />
