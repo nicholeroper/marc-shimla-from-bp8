@@ -332,7 +332,7 @@ export const IMAGES = {
   heroAbout: '/facade1.jpg',
   heroRooms: '/rooms/super-deluxe-room/super-deluxe-room1.avif',
   heroDining: '/dining/hotel-marc-shimla-banner.webp',
-  heroFacilities: 'https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1920&q=80',
+  heroFacilities: '/facility/facilities-banner.jpg',
   heroContact: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920&q=80',
   heroAttractions: 'https://images.unsplash.com/photo-1597735881932-d9664c9bbcea?w=1920&q=80',
   shimlaValley: '/view1.jpg',

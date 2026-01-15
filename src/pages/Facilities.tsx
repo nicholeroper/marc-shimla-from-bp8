@@ -182,7 +182,7 @@ export function Facilities() {
 
             <div className="relative">
               <img
-                src="https://images.unsplash.com/photo-1486006920555-c77dcf18193c?w=800&q=80"
+                src="/facility/hotel-mark-parking.jpg"
                 alt="Parking facility"
                 className="rounded-sm shadow-xl w-full"
               />
