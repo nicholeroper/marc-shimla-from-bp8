@@ -98,7 +98,9 @@ export const ROOMS = [
     image: '/rooms/family-suite/family-suite1.avif',
     images: [
       '/rooms/family-suite/family-suite1.avif',
+      '/rooms/family-suite/family-site1_2.jpg',
       '/rooms/family-suite/family-suite2.webp',
+      '/rooms/family-suite/family-suite_3.avif',
       '/rooms/family-suite/family-suite3.webp',
       '/rooms/family-suite/family-suite4.avif',
       '/rooms/family-suite/family-suite5.avif',
