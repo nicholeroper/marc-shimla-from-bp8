@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Car, Mountain, UtensilsCrossed, MapPin, ArrowRight, Star, Clock, CheckCircle, ChefHat, Wifi, Sun, Camera, Phone, Mail, Coffee } from 'lucide-react';
+import { Car, Mountain, UtensilsCrossed, MapPin, ArrowRight, Star, Clock, CheckCircle, ChefHat, Wifi, Sun, Camera, Phone, Mail, Coffee, Tv, Droplets, Shirt, ConciergeBell, Shield } from 'lucide-react';
 import { Hero, SectionHeader, RoomCard, TestimonialCard, FacebookEmbed } from '../components';
 import { IMAGES, ROOMS, TESTIMONIALS, getWhatsAppLink, WHATSAPP_MESSAGES, HOTEL_INFO } from '../constants';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
@@ -43,6 +43,9 @@ const facilitiesPreview = [
   { name: 'Free Wi-Fi', icon: Wifi, description: 'Stay connected throughout your stay' },
   { name: 'Secure Parking', icon: Car, description: 'A rare luxury in Shimla' },
   { name: 'Open Terrace', icon: Sun, description: 'Enjoy panoramic valley views' },
+  { name: '24/7 Hot Water', icon: Droplets, description: 'Geyser fitted bathrooms' },
+  { name: 'Room Service', icon: ConciergeBell, description: 'In-room dining available' },
+  { name: 'Laundry Service', icon: Shirt, description: 'Keep your wardrobe fresh' },
 ];
 
 const galleryPreview = [
