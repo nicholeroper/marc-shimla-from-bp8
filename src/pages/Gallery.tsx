@@ -5,11 +5,11 @@ import { IMAGES, getWhatsAppLink, WHATSAPP_MESSAGES } from '../constants';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 const galleryCategories = [
-  { id: 'all', name: 'All' },
-  { id: 'rooms', name: 'Rooms & Suites' },
-  { id: 'views', name: 'Views & Surroundings' },
-  { id: 'dining', name: 'Dining' },
-  { id: 'hotel', name: 'Hotel' },
+  { id: 'all', name: 'All', color: 'from-slate-600 to-slate-700' },
+  { id: 'rooms', name: 'Rooms & Suites', color: 'from-emerald-500 to-teal-500' },
+  { id: 'views', name: 'Views & Surroundings', color: 'from-sky-500 to-blue-500' },
+  { id: 'dining', name: 'Dining', color: 'from-amber-500 to-orange-500' },
+  { id: 'hotel', name: 'Hotel', color: 'from-rose-500 to-pink-500' },
 ];
 
 const galleryImages = [
@@ -87,7 +87,7 @@ export function Gallery() {
         height="large"
       />
 
-      <section className="section-padding bg-cream-50">
+      <section className="section-padding bg-gradient-to-br from-sky-50 via-cream-50 to-blue-50">
         <div className="container-custom">
           <SectionHeader
             title="Our Gallery"
@@ -99,10 +99,10 @@ export function Gallery() {
               <button
                 key={category.id}
                 onClick={() => setActiveCategory(category.id)}
-                className={`px-6 py-2 rounded-full font-medium transition-all duration-300 ${
+                className={`px-6 py-3 rounded-xl font-medium transition-all duration-300 ${
                   activeCategory === category.id
-                    ? 'bg-primary-700 text-white shadow-lg'
-                    : 'bg-white text-slate-600 hover:bg-primary-50 hover:text-primary-700 shadow'
+                    ? `bg-gradient-to-r ${category.color} text-white shadow-lg`
+                    : 'bg-white text-slate-600 hover:shadow-lg hover:-translate-y-0.5 shadow-md'
                 }`}
               >
                 {category.name}
@@ -119,7 +119,7 @@ export function Gallery() {
             {filteredImages.map((image, index) => (
               <div
                 key={image.id}
-                className="group relative aspect-square overflow-hidden rounded-sm cursor-pointer shadow-lg"
+                className="group relative aspect-square overflow-hidden rounded-xl cursor-pointer shadow-lg hover:shadow-xl transition-all duration-300 ring-2 ring-white"
                 onClick={() => openLightbox(index)}
               >
                 <img
@@ -127,7 +127,7 @@ export function Gallery() {
                   alt={image.alt}
                   className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 <div className="absolute bottom-0 left-0 right-0 p-4 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
                   <p className="text-white text-sm font-medium">{image.caption}</p>
                 </div>
@@ -137,7 +137,7 @@ export function Gallery() {
         </div>
       </section>
 
-      <section className="py-16 bg-primary-700">
+      <section className="py-16 bg-gradient-to-r from-sky-600 via-blue-600 to-cyan-600">
         <div className="container-custom px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="font-serif text-3xl sm:text-4xl font-semibold text-white mb-4">
             Experience It Yourself
@@ -149,7 +149,7 @@ export function Gallery() {
             href={getWhatsAppLink(WHATSAPP_MESSAGES.booking)}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-gold"
+            className="inline-flex items-center justify-center px-8 py-4 bg-white text-sky-600 font-semibold rounded-lg hover:bg-sky-50 transition-all duration-300 shadow-lg hover:shadow-xl"
           >
             Book Your Stay
           </a>
@@ -157,10 +157,10 @@ export function Gallery() {
       </section>
 
       {lightboxOpen && (
-        <div className="fixed inset-0 z-50 bg-black/95 flex items-center justify-center">
+        <div className="fixed inset-0 z-50 bg-slate-900/95 flex items-center justify-center">
           <button
             onClick={closeLightbox}
-            className="absolute top-4 right-4 text-white hover:text-gold-400 transition-colors z-10"
+            className="absolute top-4 right-4 text-white hover:text-cyan-400 transition-colors z-10 p-2 rounded-full hover:bg-white/10"
             aria-label="Close lightbox"
           >
             <X className="w-8 h-8" />
@@ -168,7 +168,7 @@ export function Gallery() {
 
           <button
             onClick={goToPrevious}
-            className="absolute left-4 top-1/2 -translate-y-1/2 text-white hover:text-gold-400 transition-colors z-10 p-2"
+            className="absolute left-4 top-1/2 -translate-y-1/2 text-white hover:text-cyan-400 transition-colors z-10 p-3 rounded-full hover:bg-white/10"
             aria-label="Previous image"
           >
             <ChevronLeft className="w-10 h-10" />
@@ -176,7 +176,7 @@ export function Gallery() {
 
           <button
             onClick={goToNext}
-            className="absolute right-4 top-1/2 -translate-y-1/2 text-white hover:text-gold-400 transition-colors z-10 p-2"
+            className="absolute right-4 top-1/2 -translate-y-1/2 text-white hover:text-cyan-400 transition-colors z-10 p-3 rounded-full hover:bg-white/10"
             aria-label="Next image"
           >
             <ChevronRight className="w-10 h-10" />
