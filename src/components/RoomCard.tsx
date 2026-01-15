@@ -11,6 +11,8 @@ interface RoomCardProps {
   image: string;
   featured?: boolean;
   index?: number;
+  originalPrice?: number;
+  price?: number;
 }
 
 export function RoomCard({
@@ -22,6 +24,8 @@ export function RoomCard({
   image,
   featured = false,
   index = 0,
+  originalPrice,
+  price,
 }: RoomCardProps) {
   const { ref, isVisible } = useScrollAnimation<HTMLDivElement>();
   const whatsappMessage = `Hello! I would like to book the ${name} at Hotel Marc, Shimla.`;
@@ -64,7 +68,7 @@ export function RoomCard({
 
         <p className="text-slate-600 text-sm leading-relaxed mb-6">{description}</p>
 
-        <div className="border-t border-slate-100 pt-4 mb-6">
+        <div className="border-t border-slate-100 pt-4 mb-4">
           <h4 className="text-sm font-semibold text-slate-700 mb-3">Room Amenities</h4>
           <div className="grid grid-cols-2 gap-2">
             {amenities.slice(0, 6).map((amenity) => (
@@ -75,6 +79,27 @@ export function RoomCard({
             ))}
           </div>
         </div>
+
+        {price && (
+          <div className="border-t border-slate-100 pt-4 mb-4">
+            <div className="flex items-baseline gap-2">
+              {originalPrice && (
+                <span className="text-slate-400 line-through text-lg">
+                  ₹{originalPrice.toLocaleString('en-IN')}
+                </span>
+              )}
+              <span className="text-2xl font-bold text-primary-700">
+                ₹{price.toLocaleString('en-IN')}
+              </span>
+              <span className="text-slate-500 text-sm">/night</span>
+            </div>
+            {originalPrice && (
+              <span className="inline-block mt-1 text-xs font-medium text-green-600 bg-green-50 px-2 py-0.5 rounded">
+                Save ₹{(originalPrice - price).toLocaleString('en-IN')}
+              </span>
+            )}
+          </div>
+        )}
 
         <a
           href={bookingLink}

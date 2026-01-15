@@ -68,6 +68,8 @@ export const ROOMS = [
       '/rooms/deluxe-room/deluxe-room7.avif',
     ],
     featured: false,
+    originalPrice: 2899,
+    price: 2499,
   },
   {
     id: 'super-deluxe',
@@ -87,6 +89,8 @@ export const ROOMS = [
       '/rooms/super-deluxe-room/super-deluxe-room7.avif',
     ],
     featured: true,
+    originalPrice: 3899,
+    price: 2899,
   },
   {
     id: 'family-suite',
@@ -109,6 +113,8 @@ export const ROOMS = [
       '/rooms/family-suite/family-suite8.avif',
     ],
     featured: false,
+    originalPrice: 4899,
+    price: 3899,
   },
 ];
 
