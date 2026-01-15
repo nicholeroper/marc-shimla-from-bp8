@@ -1,8 +1,10 @@
-import { Check, Star } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { Check, Star, ArrowRight } from 'lucide-react';
 import { HOTEL_INFO } from '../constants';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 interface RoomCardProps {
+  id: string;
   name: string;
   subtitle: string;
   bestFor: string;
@@ -16,6 +18,7 @@ interface RoomCardProps {
 }
 
 export function RoomCard({
+  id,
   name,
   subtitle,
   bestFor,
@@ -101,18 +104,27 @@ export function RoomCard({
           </div>
         )}
 
-        <a
-          href={bookingLink}
-          target="_blank"
-          rel="noopener noreferrer"
-          className={`block w-full text-center py-3 font-medium transition-colors ${
-            featured
-              ? 'bg-gold-500 text-white hover:bg-gold-600'
-              : 'bg-primary-700 text-white hover:bg-primary-800'
-          }`}
-        >
-          Book This Room
-        </a>
+        <div className="flex gap-3">
+          <Link
+            to={`/rooms#${id}`}
+            className="flex-1 flex items-center justify-center gap-2 py-3 border border-slate-300 text-slate-700 font-medium hover:bg-slate-50 transition-colors"
+          >
+            View Details
+            <ArrowRight className="w-4 h-4" />
+          </Link>
+          <a
+            href={bookingLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`flex-1 text-center py-3 font-medium transition-colors ${
+              featured
+                ? 'bg-gold-500 text-white hover:bg-gold-600'
+                : 'bg-primary-700 text-white hover:bg-primary-800'
+            }`}
+          >
+            Book Now
+          </a>
+        </div>
       </div>
     </div>
   );

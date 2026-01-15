@@ -1,3 +1,5 @@
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import { Clock, Users, CreditCard, Heart, Wifi, Tv, Bath, Coffee } from 'lucide-react';
 import { Hero, SectionHeader, RoomSection } from '../components';
 import { IMAGES, ROOMS, HOTEL_INFO, getWhatsAppLink, WHATSAPP_MESSAGES } from '../constants';
@@ -18,8 +20,21 @@ const commonAmenities = [
 ];
 
 export function Rooms() {
+  const location = useLocation();
   const policyRef = useScrollAnimation<HTMLDivElement>();
   const amenitiesRef = useScrollAnimation<HTMLDivElement>();
+
+  useEffect(() => {
+    if (location.hash) {
+      const id = location.hash.replace('#', '');
+      const element = document.getElementById(id);
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 100);
+      }
+    }
+  }, [location.hash]);
 
   return (
     <>
