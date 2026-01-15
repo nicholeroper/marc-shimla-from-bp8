@@ -8,19 +8,19 @@ const cuisines = [
     name: 'North Indian',
     description: 'Authentic flavors from the heart of India',
     dishes: ['Dal Makhani', 'Butter Chicken', 'Paneer Specials', 'Tandoori Items', 'Biryani'],
-    image: 'https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=600&q=80',
+    image: '/dining/north-indian-cuisine.jpg',
   },
   {
     name: 'Chinese',
     description: 'Indo-Chinese favorites for every palate',
     dishes: ['Hakka Noodles', 'Manchurian', 'Fried Rice', 'Spring Rolls', 'Soups'],
-    image: 'https://images.unsplash.com/photo-1563245372-f21724e3856d?w=600&q=80',
+    image: '/dining/chinese-cuisine.png',
   },
   {
     name: 'Continental',
     description: 'Light bites and comfort food',
     dishes: ['Sandwiches', 'Pasta', 'Toast', 'Omelettes', 'French Fries'],
-    image: 'https://images.unsplash.com/photo-1481070555726-e2fe8357571d?w=600&q=80',
+    image: '/dining/contiental-cuisine.png',
   },
 ];
 
@@ -97,7 +97,7 @@ export function Dining() {
 
             <div className="relative">
               <img
-                src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&q=80"
+                src="/dining/hotel-marc-restaurant-dining-experience.webp"
                 alt="Marc Kitchen dining area"
                 className="rounded-sm shadow-xl w-full"
               />
@@ -170,7 +170,7 @@ export function Dining() {
           >
             <div className="order-2 lg:order-1">
               <img
-                src="https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?w=800&q=80"
+                src="/dining/start-your-day-right.jpg"
                 alt="Breakfast spread"
                 className="rounded-sm shadow-xl w-full"
               />
