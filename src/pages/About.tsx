@@ -72,7 +72,7 @@ export function About() {
 
             <div className="relative">
               <img
-                src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80"
+                src="/about/hotel-marc-our-journey.jpg"
                 alt="Hotel Marc building"
                 className="rounded-sm shadow-xl w-full"
               />
@@ -163,7 +163,7 @@ export function About() {
           >
             <div className="order-2 lg:order-1">
               <img
-                src="https://images.unsplash.com/photo-1551632436-cbf8dd35adfa?w=800&q=80"
+                src="/about/hotel-marc-team.jpeg"
                 alt="Hotel staff"
                 className="rounded-sm shadow-xl w-full"
               />
