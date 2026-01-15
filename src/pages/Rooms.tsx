@@ -1,5 +1,5 @@
 import { Clock, Users, CreditCard, Heart, Wifi, Tv, Bath, Coffee } from 'lucide-react';
-import { Hero, SectionHeader, RoomCard } from '../components';
+import { Hero, SectionHeader, RoomSection } from '../components';
 import { IMAGES, ROOMS, HOTEL_INFO, getWhatsAppLink, WHATSAPP_MESSAGES } from '../constants';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
@@ -33,17 +33,23 @@ export function Rooms() {
       <section className="section-padding bg-cream-50">
         <div className="container-custom">
           <SectionHeader
-            title="Choose Your Perfect Room"
+            title="Our Accommodations"
             subtitle="Clean, spacious, and well-furnished rooms with modern amenities. All rooms feature flat-screen TVs, intercoms, and attached bathrooms with hot & cold water."
           />
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {ROOMS.map((room, index) => (
-              <RoomCard key={room.id} {...room} index={index} />
-            ))}
-          </div>
         </div>
       </section>
+
+      {ROOMS.map((room, index) => (
+        <section
+          key={room.id}
+          id={room.id}
+          className={`section-padding ${index % 2 === 0 ? 'bg-white' : 'bg-cream-50'}`}
+        >
+          <div className="container-custom">
+            <RoomSection {...room} reversed={index % 2 !== 0} />
+          </div>
+        </section>
+      ))}
 
       <section className="section-padding bg-slate-900 text-white">
         <div className="container-custom">
@@ -95,8 +101,8 @@ export function Rooms() {
               />
               <div className="absolute -bottom-6 -right-6 bg-gold-500 p-6 rounded-sm shadow-xl hidden md:block">
                 <p className="text-white font-semibold">Starting from</p>
-                <p className="text-3xl font-serif font-bold text-white">Best Rates</p>
-                <p className="text-white/80 text-sm">Book Direct & Save</p>
+                <p className="text-3xl font-serif font-bold text-white">₹2,499</p>
+                <p className="text-white/80 text-sm">per night</p>
               </div>
             </div>
           </div>

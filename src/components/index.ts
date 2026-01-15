@@ -3,6 +3,7 @@ export { Footer } from './Footer';
 export { Hero } from './Hero';
 export { SectionHeader } from './SectionHeader';
 export { RoomCard } from './RoomCard';
+export { RoomSection } from './RoomSection';
 export { TestimonialCard } from './TestimonialCard';
 export { FeatureCard } from './FeatureCard';
 export { AttractionCard } from './AttractionCard';
