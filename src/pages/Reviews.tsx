@@ -51,7 +51,7 @@ export default function Reviews() {
       <Hero
         title="Guest Reviews"
         subtitle="See what our guests say about their stay at Hotel Marc"
-        image="https://images.pexels.com/photos/261102/pexels-photo-261102.jpeg?auto=compress&cs=tinysrgb&w=1920"
+        image="/reviews-banner.webp"
         height="medium"
       />
 
