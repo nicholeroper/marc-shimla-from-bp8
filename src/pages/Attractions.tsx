@@ -190,7 +190,7 @@ export function Attractions() {
       <section className="relative py-24">
         <div
           className="absolute inset-0 bg-cover bg-center bg-fixed"
-          style={{ backgroundImage: `url(https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?w=1920&q=80)` }}
+          style={{ backgroundImage: `url(/attractions/local-attractions/viceregal_lodge.jpg)` }}
         />
         <div className="absolute inset-0 bg-primary-900/85" />
 
