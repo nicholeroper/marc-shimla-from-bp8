@@ -1,8 +1,10 @@
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import { Send, User, Phone, Calendar, Users, MessageSquare } from 'lucide-react';
 import { HOTEL_INFO } from '../constants';
 
 export function ContactForm() {
+  const today = useMemo(() => new Date().toISOString().split('T')[0], []);
+
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
@@ -11,6 +13,8 @@ export function ContactForm() {
     guests: '2',
     message: '',
   });
+
+  const minCheckOutDate = formData.checkIn || today;
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -82,6 +86,7 @@ ${formData.message ? `Message: ${formData.message}` : ''}`;
               name="checkIn"
               value={formData.checkIn}
               onChange={handleChange}
+              min={today}
               required
               className="w-full pl-12 pr-4 py-3 border border-slate-300 rounded-sm focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors"
             />
@@ -99,6 +104,7 @@ ${formData.message ? `Message: ${formData.message}` : ''}`;
               name="checkOut"
               value={formData.checkOut}
               onChange={handleChange}
+              min={minCheckOutDate}
               required
               className="w-full pl-12 pr-4 py-3 border border-slate-300 rounded-sm focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors"
             />
