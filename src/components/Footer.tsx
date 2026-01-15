@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin, Facebook, Instagram, Clock, Car, Mountain } from 'lucide-react';
-import { HOTEL_INFO, NAV_LINKS, WHATSAPP_LINK } from '../constants';
+import { HOTEL_INFO, NAV_LINKS, getWhatsAppLink, WHATSAPP_MESSAGES } from '../constants';
 
 export function Footer() {
   return (
@@ -102,7 +102,7 @@ export function Footer() {
               </div>
             </div>
             <a
-              href={WHATSAPP_LINK}
+              href={getWhatsAppLink(WHATSAPP_MESSAGES.booking)}
               target="_blank"
               rel="noopener noreferrer"
               className="mt-6 inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 px-6 py-3 rounded-sm text-sm font-medium transition-colors"

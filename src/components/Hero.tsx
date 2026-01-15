@@ -1,5 +1,5 @@
 import { ChevronDown } from 'lucide-react';
-import { WHATSAPP_LINK } from '../constants';
+import { getWhatsAppLink, WHATSAPP_MESSAGES } from '../constants';
 
 interface HeroProps {
   image: string;
@@ -59,7 +59,7 @@ export function Hero({
         {showCta && (
           <div className="animate-fade-in" style={{ animationDelay: '0.4s' }}>
             <a
-              href={WHATSAPP_LINK}
+              href={getWhatsAppLink(WHATSAPP_MESSAGES.booking)}
               target="_blank"
               rel="noopener noreferrer"
               className="btn-gold text-lg"

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { X, ChevronLeft, ChevronRight } from 'lucide-react';
 import { Hero, SectionHeader } from '../components';
-import { IMAGES } from '../constants';
+import { IMAGES, getWhatsAppLink, WHATSAPP_MESSAGES } from '../constants';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 const galleryCategories = [
@@ -146,7 +146,7 @@ export function Gallery() {
             Pictures can only tell part of the story. Visit Hotel Marc and create your own memories in beautiful Shimla.
           </p>
           <a
-            href="https://wa.me/918091280700?text=Hello!%20I%20would%20like%20to%20inquire%20about%20room%20availability%20at%20Hotel%20Marc%2C%20Shimla."
+            href={getWhatsAppLink(WHATSAPP_MESSAGES.booking)}
             target="_blank"
             rel="noopener noreferrer"
             className="btn-gold"

@@ -14,7 +14,20 @@ export const HOTEL_INFO = {
   },
 };
 
-export const WHATSAPP_LINK = `https://wa.me/${HOTEL_INFO.whatsappNumber}?text=${encodeURIComponent('Hello! I would like to inquire about room availability at Hotel Marc, Shimla.')}`;
+export const WHATSAPP_MESSAGES = {
+  general: 'Hello! I would like to inquire about Hotel Marc, Shimla.',
+  roomAvailability: 'Hello! I would like to inquire about room availability at Hotel Marc, Shimla.',
+  booking: 'Hello! I would like to book a room at Hotel Marc, Shimla.',
+  dining: 'Hello! I would like to inquire about dining options at Hotel Marc, Shimla.',
+  facilities: 'Hello! I would like to know more about the facilities at Hotel Marc, Shimla.',
+  attractions: 'Hello! I would like to arrange sightseeing from Hotel Marc, Shimla.',
+  contact: 'Hello! I have a question about Hotel Marc, Shimla.',
+};
+
+export const getWhatsAppLink = (message: string) =>
+  `https://wa.me/${HOTEL_INFO.whatsappNumber}?text=${encodeURIComponent(message)}`;
+
+export const WHATSAPP_LINK = getWhatsAppLink(WHATSAPP_MESSAGES.roomAvailability);
 
 export const NAV_LINKS = [
   { name: 'Home', path: '/' },

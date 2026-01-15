@@ -1,6 +1,6 @@
 import { MapPin, Clock, Car, Camera, Mountain, TreePine } from 'lucide-react';
 import { Hero, SectionHeader, AttractionCard, WeatherWidget } from '../components';
-import { IMAGES, ATTRACTIONS, WHATSAPP_LINK } from '../constants';
+import { IMAGES, ATTRACTIONS, getWhatsAppLink, WHATSAPP_MESSAGES } from '../constants';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 const categories = [
@@ -81,7 +81,7 @@ export function Attractions() {
                   Our travel desk can arrange customized tours to all these attractions. Contact us for the best rates.
                 </p>
                 <a
-                  href={WHATSAPP_LINK}
+                  href={getWhatsAppLink(WHATSAPP_MESSAGES.attractions)}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block w-full bg-gold-500 hover:bg-gold-600 text-white text-center py-3 rounded-sm font-medium transition-colors"
@@ -203,7 +203,7 @@ export function Attractions() {
               Our travel desk offers customized tour packages to all major attractions. From pickup services to guided tours, we've got you covered.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="btn-gold">
+              <a href={getWhatsAppLink(WHATSAPP_MESSAGES.attractions)} target="_blank" rel="noopener noreferrer" className="btn-gold">
                 Contact Travel Desk
               </a>
             </div>

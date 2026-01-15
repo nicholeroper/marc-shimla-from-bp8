@@ -1,6 +1,6 @@
 import { Wifi, Car, MapPin, Shirt, Stethoscope, Zap, Sun, Bell, Shield, Clock, Sparkles, Users } from 'lucide-react';
 import { Hero, SectionHeader } from '../components';
-import { IMAGES, WHATSAPP_LINK, HOTEL_INFO } from '../constants';
+import { IMAGES, getWhatsAppLink, WHATSAPP_MESSAGES, HOTEL_INFO } from '../constants';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 const facilities = [
@@ -266,7 +266,7 @@ export function Facilities() {
               </div>
 
               <div className="text-center mt-8">
-                <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="btn-gold">
+                <a href={getWhatsAppLink(WHATSAPP_MESSAGES.attractions)} target="_blank" rel="noopener noreferrer" className="btn-gold">
                   Book Travel Services
                 </a>
               </div>

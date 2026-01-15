@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Phone, Mail, MessageCircle } from 'lucide-react';
-import { HOTEL_INFO, NAV_LINKS, WHATSAPP_LINK } from '../constants';
+import { HOTEL_INFO, NAV_LINKS, getWhatsAppLink, WHATSAPP_MESSAGES } from '../constants';
 import { useScrollHeader } from '../hooks/useScrollHeader';
 
 export function Header() {
@@ -38,7 +38,7 @@ export function Header() {
               </a>
             </div>
             <a
-              href={WHATSAPP_LINK}
+              href={getWhatsAppLink(WHATSAPP_MESSAGES.general)}
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 bg-green-600 hover:bg-green-700 px-4 py-1 rounded-sm transition-colors"
@@ -83,7 +83,7 @@ export function Header() {
 
             <div className="hidden lg:block">
               <a
-                href={WHATSAPP_LINK}
+                href={getWhatsAppLink(WHATSAPP_MESSAGES.booking)}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-gold"
@@ -155,7 +155,7 @@ export function Header() {
 
             <div className="mt-8 space-y-4">
               <a
-                href={WHATSAPP_LINK}
+                href={getWhatsAppLink(WHATSAPP_MESSAGES.booking)}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-gold w-full"

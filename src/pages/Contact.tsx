@@ -1,6 +1,6 @@
 import { Phone, Mail, MapPin, Clock, Navigation } from 'lucide-react';
 import { Hero, SectionHeader, ContactForm, FacebookEmbed } from '../components';
-import { IMAGES, HOTEL_INFO, DISTANCES, WHATSAPP_LINK } from '../constants';
+import { IMAGES, HOTEL_INFO, DISTANCES, getWhatsAppLink, WHATSAPP_MESSAGES } from '../constants';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 export function Contact() {
@@ -85,7 +85,7 @@ export function Contact() {
 
               <div className="mt-8">
                 <a
-                  href={WHATSAPP_LINK}
+                  href={getWhatsAppLink(WHATSAPP_MESSAGES.contact)}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-gold"
@@ -236,7 +236,7 @@ export function Contact() {
                   Call for Pickup
                 </a>
                 <a
-                  href={WHATSAPP_LINK}
+                  href={getWhatsAppLink(WHATSAPP_MESSAGES.booking)}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-center gap-2 w-full bg-green-600 hover:bg-green-700 text-white py-3 rounded-sm font-medium transition-colors"

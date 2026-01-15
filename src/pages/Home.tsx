@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { Car, Mountain, UtensilsCrossed, MapPin, ArrowRight, Star, Clock, CheckCircle, ChefHat, Wifi, Sun, Camera, Phone, Mail, Coffee } from 'lucide-react';
 import { Hero, SectionHeader, RoomCard, TestimonialCard, FacebookEmbed } from '../components';
-import { IMAGES, ROOMS, TESTIMONIALS, WHATSAPP_LINK, HOTEL_INFO } from '../constants';
+import { IMAGES, ROOMS, TESTIMONIALS, getWhatsAppLink, WHATSAPP_MESSAGES, HOTEL_INFO } from '../constants';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 const highlights = [
@@ -516,7 +516,7 @@ export function Home() {
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
-              <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="btn-gold">
+              <a href={getWhatsAppLink(WHATSAPP_MESSAGES.booking)} target="_blank" rel="noopener noreferrer" className="btn-gold">
                 Book Now on WhatsApp
               </a>
               <a href={`tel:${HOTEL_INFO.phone.replace(/\s/g, '')}`} className="btn-secondary border-white text-white hover:bg-white hover:text-primary-700">

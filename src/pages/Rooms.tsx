@@ -1,6 +1,6 @@
 import { Clock, Users, CreditCard, Heart, Wifi, Tv, Bath, Coffee } from 'lucide-react';
 import { Hero, SectionHeader, RoomCard } from '../components';
-import { IMAGES, ROOMS, HOTEL_INFO, WHATSAPP_LINK } from '../constants';
+import { IMAGES, ROOMS, HOTEL_INFO, getWhatsAppLink, WHATSAPP_MESSAGES } from '../constants';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 const policies = [
@@ -172,7 +172,7 @@ export function Rooms() {
             Contact us directly for the best rates and personalized assistance with your booking.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="btn-gold">
+            <a href={getWhatsAppLink(WHATSAPP_MESSAGES.booking)} target="_blank" rel="noopener noreferrer" className="btn-gold">
               Book via WhatsApp
             </a>
             <a href={`tel:${HOTEL_INFO.phone.replace(/\s/g, '')}`} className="btn-secondary border-white text-white hover:bg-white hover:text-primary-700">

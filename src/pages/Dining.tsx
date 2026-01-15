@@ -1,6 +1,6 @@
 import { Clock, Utensils, Leaf, ChefHat, Coffee, Soup } from 'lucide-react';
 import { Hero, SectionHeader } from '../components';
-import { IMAGES, WHATSAPP_LINK } from '../constants';
+import { IMAGES, getWhatsAppLink, WHATSAPP_MESSAGES } from '../constants';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 const cuisines = [
@@ -214,7 +214,7 @@ export function Dining() {
             <p className="text-slate-600 text-lg leading-relaxed mb-8">
               Prefer to dine in the comfort of your room? Our room service brings the Marc Kitchen experience right to your doorstep. Enjoy your meal while watching the sunset over the hills from your private space.
             </p>
-            <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="btn-gold">
+            <a href={getWhatsAppLink(WHATSAPP_MESSAGES.dining)} target="_blank" rel="noopener noreferrer" className="btn-gold">
               Order via WhatsApp
             </a>
           </div>
