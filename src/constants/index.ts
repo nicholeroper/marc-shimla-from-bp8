@@ -38,7 +38,7 @@ export const NAV_LINKS = [
   { name: 'Facilities', path: '/facilities' },
   { name: 'Gallery', path: '/gallery' },
   { name: 'Attractions', path: '/attractions' },
-  { name: 'Packages', path: '/packages' },
+  { name: 'Holiday Packages', path: '/packages' },
   { name: 'Reviews', path: '/reviews' },
   { name: 'Contact', path: '/contact' },
 ];
