@@ -59,10 +59,10 @@ export function Dining() {
   return (
     <>
       <SEO
-        title="Marc Kitchen Restaurant | Hotel Marc Shimla Dining | Best Food in Shimla"
-        description="Dine at Marc Kitchen, Hotel Marc Shimla's multi-cuisine restaurant. Enjoy North Indian, Chinese & Continental dishes. Fresh, hygienic home-style cooking in Shimla."
+        title="Best Restaurant in Shimla | Marc Kitchen | Hotel with Good Food | Hotel Marc"
+        description="Marc Kitchen - best restaurant at Hotel Marc Shimla. Multi-cuisine dining with North Indian, Chinese & Continental food. Hotels in Shimla with restaurant & room service. Hygienic homely meals."
         canonical="https://marcshimla.in/dining"
-        keywords="Restaurant Shimla, Hotel Marc Restaurant, Marc Kitchen, North Indian Food Shimla, Chinese Food Shimla"
+        keywords="Best Restaurant Shimla, Hotel with Restaurant Shimla, Good Food Hotel Shimla, Multi Cuisine Restaurant Shimla, North Indian Food Shimla, Chinese Food Shimla, Room Service Hotel Shimla, Hotels with Food Shimla, Breakfast Included Hotel Shimla, Vegetarian Hotel Shimla"
       />
       <Hero
         image={IMAGES.heroDining}

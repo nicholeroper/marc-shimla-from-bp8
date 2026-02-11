@@ -81,10 +81,10 @@ export function Gallery() {
   return (
     <>
       <SEO
-        title="Hotel Marc Shimla Photo Gallery | Rooms, Views & Hotel Images"
-        description="View photos of Hotel Marc Shimla - rooms, valley views, dining, and facilities. See why we're the best hotel in Shimla with stunning mountain views and comfortable rooms."
+        title="Hotel Marc Shimla Photos | Best Hotel Images | Rooms & Valley Views Gallery"
+        description="View photos of Hotel Marc - best hotel in Shimla. See our rooms, stunning valley views, Marc Kitchen restaurant & facilities. Top rated Shimla hotel with beautiful mountain views."
         canonical="https://marcshimla.in/gallery"
-        keywords="Hotel Marc Photos, Shimla Hotel Images, Valley View Photos Shimla, Hotel Rooms Shimla"
+        keywords="Hotel Marc Photos, Best Shimla Hotel Photos, Hotel Room Images Shimla, Valley View Hotel Photos, Mountain View Hotel Shimla, Shimla Hotel Gallery, Hotel Pictures Shimla, Best Looking Hotel Shimla"
       />
       <Hero
         image={IMAGES.shimlaValley}

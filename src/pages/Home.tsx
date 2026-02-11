@@ -83,10 +83,10 @@ export function Home() {
   return (
     <>
       <SEO
-        title="Hotel Marc Shimla | Best Hotel in Shimla | Marc Hotel Shimla | Shimla Marc Hotel"
-        description="Hotel Marc Shimla - Premium hotel in Shimla near Mall Road. Book Marc Hotel Shimla for valley view rooms, ample parking, and homely food. Best hotel in Shimla with affordable rates. Call 9418385000."
+        title="Hotel Marc Shimla | Best Hotel in Shimla | Top Hotels Near Mall Road | Affordable Shimla Stay"
+        description="Hotel Marc - Best hotel in Shimla near Mall Road. Top rated for valley views, free parking & homely food. Affordable family hotel in Shimla with great reviews. Book now: 9418385000. Best price guaranteed!"
         canonical="https://marcshimla.in/"
-        keywords="Shimla Accommodation, Shimla Stay, Hotels near Mall Road, Budget Hotel Shimla, Family Hotel Shimla"
+        keywords="Top 10 Hotels Shimla, Cheap Hotels Shimla, Affordable Hotels Shimla, Honeymoon Hotels Shimla, Couple Friendly Hotels Shimla, Mountain View Hotel Shimla, 3 Star Hotel Shimla, Good Hotels Shimla, Clean Hotels Shimla, Safe Hotels Shimla, Hotels with Restaurant Shimla, Hill Station Hotels India, Summer Vacation Hotel Shimla, Snowfall Hotel Shimla"
       />
       <Hero
         image={IMAGES.hero}

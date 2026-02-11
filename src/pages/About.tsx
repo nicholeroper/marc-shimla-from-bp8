@@ -43,10 +43,10 @@ export function About() {
   return (
     <>
       <SEO
-        title="About Hotel Marc Shimla | Best Family Hotel in Shimla Since 2014"
-        description="Learn about Hotel Marc Shimla - a family-run hotel in Chaura Maidan since 2014. Experience warm hospitality near Viceregal Lodge with valley views and homely food. Marc Hotel Shimla."
+        title="About Hotel Marc Shimla | Best Family Run Hotel in Shimla | Since 2014"
+        description="Hotel Marc Shimla - best family-run hotel since 2014. Experience warm hospitality, valley views & homely food near Mall Road. Top rated budget hotel in Shimla with personalized service."
         canonical="https://marcshimla.in/about"
-        keywords="About Hotel Marc, Marc Hotel History, Family Hotel Shimla, Chaura Maidan Hotel"
+        keywords="About Best Hotel Shimla, Family Run Hotel Shimla, Local Hotel Shimla, Budget Hotel with Good Service, Hotel Marc Story, Chaura Maidan Best Hotel, Trusted Hotel Shimla, Safe Hotel for Families Shimla, Personalized Service Hotel Shimla"
       />
       <Hero
         image={IMAGES.heroAbout}

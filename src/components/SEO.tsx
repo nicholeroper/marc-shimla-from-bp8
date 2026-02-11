@@ -7,7 +7,7 @@ interface SEOProps {
   keywords?: string;
 }
 
-const BASE_KEYWORDS = 'Hotel Marc Shimla, Marc Hotel Shimla, Shimla Marc Hotel, Hotel in Shimla, Hotels in Shimla, Best Hotel in Shimla';
+const BASE_KEYWORDS = 'Hotel Marc Shimla, Marc Hotel Shimla, Shimla Marc Hotel, Hotel in Shimla, Hotels in Shimla, Best Hotel in Shimla, Best Hotels in Shimla, Top Hotels in Shimla, Hotels near Mall Road Shimla, Budget Hotel Shimla, Family Hotel Shimla, Shimla Accommodation, Where to Stay in Shimla';
 
 export function SEO({ title, description, canonical, keywords }: SEOProps) {
   useEffect(() => {

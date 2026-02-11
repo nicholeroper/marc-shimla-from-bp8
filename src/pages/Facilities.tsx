@@ -88,10 +88,10 @@ export function Facilities() {
   return (
     <>
       <SEO
-        title="Hotel Marc Shimla Facilities | Free Parking, WiFi & Amenities"
-        description="Hotel Marc Shimla offers free parking, WiFi, room service, travel desk & more. Best amenities at affordable rates in Shimla. Book hotel with parking near Mall Road."
+        title="Best Hotel Amenities in Shimla | Free Parking & WiFi | Hotel Marc Facilities"
+        description="Hotel Marc - best amenities in Shimla. Free parking (rare in Shimla!), WiFi, 24hr room service, travel desk, laundry & more. Top facilities at affordable prices near Mall Road."
         canonical="https://marcshimla.in/facilities"
-        keywords="Hotel Facilities Shimla, Hotel with Parking Shimla, WiFi Hotel Shimla, Room Service Shimla"
+        keywords="Best Hotel Amenities Shimla, Hotel with Free Parking Shimla, Free WiFi Hotel Shimla, Hotels with Parking in Shimla, 24 Hour Room Service Shimla, Travel Desk Hotel Shimla, Laundry Service Hotel Shimla, Power Backup Hotel Shimla, Safe Hotel Shimla, Hotel with Terrace Shimla, Hot Water Hotel Shimla, Heater Hotel Shimla"
       />
       <Hero
         image={IMAGES.heroFacilities}

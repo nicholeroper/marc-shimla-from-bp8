@@ -33,10 +33,10 @@ export function HolidayPackages() {
   return (
     <>
       <SEO
-        title="Shimla Holiday Packages | Marc Holidayers | Himachal Tour Packages"
-        description="Book Shimla holiday packages with Marc Holidayers. Government registered tour operator offering Shimla-Manali, Kufri, Naldehra packages. Best rates from Hotel Marc Shimla."
+        title="Best Shimla Tour Packages | Himachal Holiday Deals | Hotel with Tour Package"
+        description="Book best Shimla tour packages from Hotel Marc. Shimla-Manali, Kufri, Chail packages by Marc Holidayers - Govt registered. Hotels with holiday packages in Himachal. Best deals guaranteed!"
         canonical="https://marcshimla.in/packages"
-        keywords="Shimla Tour Packages, Himachal Holiday Packages, Shimla Manali Package, Kufri Tour, Naldehra Tour, Marc Holidayers"
+        keywords="Best Shimla Tour Packages, Cheap Shimla Packages, Shimla Holiday Packages, Himachal Tour Packages, Shimla Manali Package, Shimla Kullu Manali, Hotel with Tour Package Shimla, Family Package Shimla, Honeymoon Package Shimla, Budget Tour Shimla, Kufri Package, Chail Package, Naldehra Tour, Government Registered Tour Operator Shimla"
       />
       <Hero
         image={IMAGES.heroPackages}

@@ -55,10 +55,10 @@ export function Attractions() {
   return (
     <>
       <SEO
-        title="Shimla Attractions Near Hotel Marc | Places to Visit in Shimla"
-        description="Discover top Shimla attractions near Hotel Marc - Viceregal Lodge, Mall Road, State Museum, Kufri & more. Plan your Shimla sightseeing with our travel desk."
+        title="Shimla Tourist Places | Best Attractions Near Hotel Marc | Sightseeing Guide"
+        description="Explore top Shimla tourist places near Hotel Marc - Viceregal Lodge, Mall Road, Ridge, Kufri, Jakhu Temple & more. Book hotel with tour packages. Best base for Shimla sightseeing."
         canonical="https://marcshimla.in/attractions"
-        keywords="Shimla Attractions, Places to Visit Shimla, Shimla Sightseeing, Viceregal Lodge, Mall Road Shimla, Kufri"
+        keywords="Shimla Tourist Places, Best Places to Visit Shimla, Shimla Sightseeing, Things to Do Shimla, Shimla Tourism, Shimla Travel Guide, Viceregal Lodge Shimla, Mall Road Shimla, Ridge Shimla, Kufri Near Shimla, Jakhu Temple, Christ Church Shimla, Shimla Day Trips, Shimla Tour Package, Hotel near Tourist Places Shimla"
       />
       <Hero
         image={IMAGES.heroAttractions}

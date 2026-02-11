@@ -49,10 +49,10 @@ export default function Reviews() {
   return (
     <div className="min-h-screen bg-stone-50">
       <SEO
-        title="Hotel Marc Shimla Reviews | Guest Testimonials | Best Rated Hotel"
-        description="Read genuine guest reviews of Hotel Marc Shimla. 4.2 rating with 60+ reviews. See why travelers recommend our hotel for comfort, hospitality, and value in Shimla."
+        title="Hotel Marc Shimla Reviews | Top Rated Hotel in Shimla | Guest Testimonials"
+        description="Read genuine reviews of Hotel Marc - top rated hotel in Shimla. 4.2 rating with 60+ verified reviews on Google, TripAdvisor & Goibibo. Best value hotel with excellent service, parking & food."
         canonical="https://marcshimla.in/reviews"
-        keywords="Hotel Marc Reviews, Shimla Hotel Reviews, Guest Testimonials Shimla, Best Rated Hotel Shimla"
+        keywords="Hotel Marc Reviews, Best Rated Hotel Shimla, Top Rated Shimla Hotels, Shimla Hotel Reviews, Guest Testimonials Shimla, TripAdvisor Shimla Hotels, Google Reviews Shimla Hotel, Recommended Hotels Shimla, Highly Rated Shimla Hotels, Good Reviews Shimla Hotel"
       />
       <Hero
         title="Guest Reviews"

@@ -39,10 +39,10 @@ export function Rooms() {
   return (
     <>
       <SEO
-        title="Rooms & Suites at Hotel Marc Shimla | Book Best Rooms in Shimla"
-        description="Book comfortable rooms at Hotel Marc Shimla. Deluxe rooms, super deluxe rooms, and family suites with valley views, WiFi, and modern amenities. Best hotel rooms in Shimla near Mall Road."
+        title="Best Rooms in Shimla | Deluxe & Family Suites | Hotel Marc | Book Online"
+        description="Book best rooms in Shimla at Hotel Marc. Deluxe rooms, super deluxe rooms & family suites with valley views near Mall Road. Affordable rates, free parking, WiFi. Call 9418385000 for best deals."
         canonical="https://marcshimla.in/rooms"
-        keywords="Hotel Rooms Shimla, Shimla Hotel Rooms, Book Room Shimla, Valley View Room Shimla, Deluxe Room Shimla, Family Suite Shimla"
+        keywords="Best Rooms Shimla, Cheap Rooms Shimla, Affordable Rooms Shimla, Valley View Room Shimla, Deluxe Room Shimla, Family Suite Shimla, Hotel Room Booking Shimla, Shimla Room Rates, Budget Room Shimla, Luxury Room Shimla, Room with View Shimla, AC Room Shimla, Heater Room Shimla, Room near Mall Road"
       />
       <Hero
         image={IMAGES.heroRooms}
