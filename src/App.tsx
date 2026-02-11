@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Header, Footer, WhatsAppButton } from './components';
-import { Home, About, Rooms, Dining, Facilities, Contact, Attractions, Reviews, Gallery } from './pages';
+import { Home, About, Rooms, Dining, Facilities, Contact, Attractions, Reviews, Gallery, HolidayPackages, PackageDetail } from './pages';
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
@@ -30,6 +30,8 @@ function AppContent() {
           <Route path="/attractions" element={<Attractions />} />
           <Route path="/reviews" element={<Reviews />} />
           <Route path="/gallery" element={<Gallery />} />
+          <Route path="/packages" element={<HolidayPackages />} />
+          <Route path="/packages/:packageId" element={<PackageDetail />} />
         </Routes>
       </main>
       <Footer />

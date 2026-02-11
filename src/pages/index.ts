@@ -7,3 +7,5 @@ export { Contact } from './Contact';
 export { Attractions } from './Attractions';
 export { default as Reviews } from './Reviews';
 export { Gallery } from './Gallery';
+export { HolidayPackages } from './HolidayPackages';
+export { PackageDetail } from './PackageDetail';

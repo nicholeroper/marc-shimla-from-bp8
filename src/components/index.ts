@@ -11,3 +11,4 @@ export { WhatsAppButton } from './WhatsAppButton';
 export { ContactForm } from './ContactForm';
 export { WeatherWidget } from './WeatherWidget';
 export { FacebookEmbed } from './FacebookEmbed';
+export { PackageCard } from './PackageCard';
