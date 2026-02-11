@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { Clock, Users, CreditCard, Heart, Wifi, Tv, Bath, Coffee } from 'lucide-react';
-import { Hero, SectionHeader, RoomSection } from '../components';
+import { Hero, SectionHeader, RoomSection, SEO } from '../components';
 import { IMAGES, ROOMS, HOTEL_INFO, getWhatsAppLink, WHATSAPP_MESSAGES } from '../constants';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
@@ -38,6 +38,12 @@ export function Rooms() {
 
   return (
     <>
+      <SEO
+        title="Rooms & Suites at Hotel Marc Shimla | Book Best Rooms in Shimla"
+        description="Book comfortable rooms at Hotel Marc Shimla. Deluxe rooms, super deluxe rooms, and family suites with valley views, WiFi, and modern amenities. Best hotel rooms in Shimla near Mall Road."
+        canonical="https://marcshimla.in/rooms"
+        keywords="Hotel Rooms Shimla, Shimla Hotel Rooms, Book Room Shimla, Valley View Room Shimla, Deluxe Room Shimla, Family Suite Shimla"
+      />
       <Hero
         image={IMAGES.heroRooms}
         title="Rooms & Suites"

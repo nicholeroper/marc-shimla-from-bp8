@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Car, Mountain, UtensilsCrossed, MapPin, ArrowRight, Star, Clock, CheckCircle, ChefHat, Wifi, Sun, Camera, Phone, Mail, Coffee, Tv, Droplets, Shirt, ConciergeBell, Shield } from 'lucide-react';
-import { Hero, SectionHeader, RoomCard, TestimonialCard, FacebookEmbed } from '../components';
+import { Hero, SectionHeader, RoomCard, TestimonialCard, FacebookEmbed, SEO } from '../components';
 import { IMAGES, ROOMS, TESTIMONIALS, getWhatsAppLink, WHATSAPP_MESSAGES, HOTEL_INFO } from '../constants';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
@@ -82,6 +82,12 @@ export function Home() {
 
   return (
     <>
+      <SEO
+        title="Hotel Marc Shimla | Best Hotel in Shimla | Marc Hotel Shimla | Shimla Marc Hotel"
+        description="Hotel Marc Shimla - Premium hotel in Shimla near Mall Road. Book Marc Hotel Shimla for valley view rooms, ample parking, and homely food. Best hotel in Shimla with affordable rates. Call 9418385000."
+        canonical="https://marcshimla.in/"
+        keywords="Shimla Accommodation, Shimla Stay, Hotels near Mall Road, Budget Hotel Shimla, Family Hotel Shimla"
+      />
       <Hero
         image={IMAGES.hero}
         title="Experience the Serenity of Shimla"

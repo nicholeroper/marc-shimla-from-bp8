@@ -1,5 +1,5 @@
 import { MapPin, Heart, Award, Users, Star, CheckCircle } from 'lucide-react';
-import { Hero, SectionHeader } from '../components';
+import { Hero, SectionHeader, SEO } from '../components';
 import { IMAGES } from '../constants';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
@@ -42,6 +42,12 @@ export function About() {
 
   return (
     <>
+      <SEO
+        title="About Hotel Marc Shimla | Best Family Hotel in Shimla Since 2014"
+        description="Learn about Hotel Marc Shimla - a family-run hotel in Chaura Maidan since 2014. Experience warm hospitality near Viceregal Lodge with valley views and homely food. Marc Hotel Shimla."
+        canonical="https://marcshimla.in/about"
+        keywords="About Hotel Marc, Marc Hotel History, Family Hotel Shimla, Chaura Maidan Hotel"
+      />
       <Hero
         image={IMAGES.heroAbout}
         title="Our Story & Vision"

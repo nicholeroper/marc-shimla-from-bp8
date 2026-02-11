@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { X, ChevronLeft, ChevronRight } from 'lucide-react';
-import { Hero, SectionHeader } from '../components';
+import { Hero, SectionHeader, SEO } from '../components';
 import { IMAGES, getWhatsAppLink, WHATSAPP_MESSAGES } from '../constants';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
@@ -80,6 +80,12 @@ export function Gallery() {
 
   return (
     <>
+      <SEO
+        title="Hotel Marc Shimla Photo Gallery | Rooms, Views & Hotel Images"
+        description="View photos of Hotel Marc Shimla - rooms, valley views, dining, and facilities. See why we're the best hotel in Shimla with stunning mountain views and comfortable rooms."
+        canonical="https://marcshimla.in/gallery"
+        keywords="Hotel Marc Photos, Shimla Hotel Images, Valley View Photos Shimla, Hotel Rooms Shimla"
+      />
       <Hero
         image={IMAGES.shimlaValley}
         title="Photo Gallery"

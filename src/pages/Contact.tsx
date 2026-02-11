@@ -1,5 +1,5 @@
 import { Phone, Mail, MapPin, Clock, Navigation } from 'lucide-react';
-import { Hero, SectionHeader, ContactForm, FacebookEmbed } from '../components';
+import { Hero, SectionHeader, ContactForm, FacebookEmbed, SEO } from '../components';
 import { IMAGES, HOTEL_INFO, DISTANCES, getWhatsAppLink, WHATSAPP_MESSAGES } from '../constants';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
@@ -9,6 +9,12 @@ export function Contact() {
 
   return (
     <>
+      <SEO
+        title="Contact Hotel Marc Shimla | Book Rooms | Location & Directions"
+        description="Contact Hotel Marc Shimla at +91-9418385000. Located in Chaura Maidan near Viceregal Lodge. Get directions, make reservations, and book your stay at the best hotel in Shimla."
+        canonical="https://marcshimla.in/contact"
+        keywords="Contact Hotel Marc, Hotel Marc Phone, Hotel Marc Address, Hotel Marc Location, Book Hotel Shimla"
+      />
       <Hero
         image={IMAGES.heroContact}
         title="Contact & Location"

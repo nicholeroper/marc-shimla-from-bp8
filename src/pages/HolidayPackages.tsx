@@ -1,5 +1,5 @@
 import { Phone, MessageCircle, Shield, MapPin, Clock, Award, CheckCircle } from 'lucide-react';
-import { Hero, SectionHeader, PackageCard } from '../components';
+import { Hero, SectionHeader, PackageCard, SEO } from '../components';
 import { IMAGES, HOLIDAY_PACKAGES, MARC_HOLIDAYERS, BOOKING_POLICY, getWhatsAppLink, WHATSAPP_MESSAGES } from '../constants';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
@@ -32,6 +32,12 @@ export function HolidayPackages() {
 
   return (
     <>
+      <SEO
+        title="Shimla Holiday Packages | Marc Holidayers | Himachal Tour Packages"
+        description="Book Shimla holiday packages with Marc Holidayers. Government registered tour operator offering Shimla-Manali, Kufri, Naldehra packages. Best rates from Hotel Marc Shimla."
+        canonical="https://marcshimla.in/packages"
+        keywords="Shimla Tour Packages, Himachal Holiday Packages, Shimla Manali Package, Kufri Tour, Naldehra Tour, Marc Holidayers"
+      />
       <Hero
         image={IMAGES.heroPackages}
         title="Holiday Packages"

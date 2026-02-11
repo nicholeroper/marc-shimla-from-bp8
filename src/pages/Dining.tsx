@@ -1,5 +1,5 @@
 import { Clock, Utensils, Leaf, ChefHat, Coffee, Soup } from 'lucide-react';
-import { Hero, SectionHeader } from '../components';
+import { Hero, SectionHeader, SEO } from '../components';
 import { IMAGES, getWhatsAppLink, WHATSAPP_MESSAGES } from '../constants';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
@@ -58,6 +58,12 @@ export function Dining() {
 
   return (
     <>
+      <SEO
+        title="Marc Kitchen Restaurant | Hotel Marc Shimla Dining | Best Food in Shimla"
+        description="Dine at Marc Kitchen, Hotel Marc Shimla's multi-cuisine restaurant. Enjoy North Indian, Chinese & Continental dishes. Fresh, hygienic home-style cooking in Shimla."
+        canonical="https://marcshimla.in/dining"
+        keywords="Restaurant Shimla, Hotel Marc Restaurant, Marc Kitchen, North Indian Food Shimla, Chinese Food Shimla"
+      />
       <Hero
         image={IMAGES.heroDining}
         title="Marc Kitchen"

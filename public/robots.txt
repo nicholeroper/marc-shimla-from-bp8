@@ -1,0 +1,11 @@
+# Robots.txt for Hotel Marc Shimla
+# https://marcshimla.in
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://marcshimla.in/sitemap.xml
+
+# Crawl-delay for polite crawling
+Crawl-delay: 1

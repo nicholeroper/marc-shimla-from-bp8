@@ -1,5 +1,5 @@
 import { Wifi, Car, MapPin, Shirt, Stethoscope, Zap, Sun, Bell, Shield, Clock, Sparkles, Users } from 'lucide-react';
-import { Hero, SectionHeader } from '../components';
+import { Hero, SectionHeader, SEO } from '../components';
 import { IMAGES, getWhatsAppLink, WHATSAPP_MESSAGES, HOTEL_INFO } from '../constants';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
@@ -87,6 +87,12 @@ export function Facilities() {
 
   return (
     <>
+      <SEO
+        title="Hotel Marc Shimla Facilities | Free Parking, WiFi & Amenities"
+        description="Hotel Marc Shimla offers free parking, WiFi, room service, travel desk & more. Best amenities at affordable rates in Shimla. Book hotel with parking near Mall Road."
+        canonical="https://marcshimla.in/facilities"
+        keywords="Hotel Facilities Shimla, Hotel with Parking Shimla, WiFi Hotel Shimla, Room Service Shimla"
+      />
       <Hero
         image={IMAGES.heroFacilities}
         title="Facilities & Amenities"

@@ -1,5 +1,5 @@
 import { MapPin, Clock, Car, Camera, Mountain, TreePine } from 'lucide-react';
-import { Hero, SectionHeader, AttractionCard, WeatherWidget } from '../components';
+import { Hero, SectionHeader, AttractionCard, WeatherWidget, SEO } from '../components';
 import { IMAGES, ATTRACTIONS, getWhatsAppLink, WHATSAPP_MESSAGES } from '../constants';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
@@ -54,6 +54,12 @@ export function Attractions() {
 
   return (
     <>
+      <SEO
+        title="Shimla Attractions Near Hotel Marc | Places to Visit in Shimla"
+        description="Discover top Shimla attractions near Hotel Marc - Viceregal Lodge, Mall Road, State Museum, Kufri & more. Plan your Shimla sightseeing with our travel desk."
+        canonical="https://marcshimla.in/attractions"
+        keywords="Shimla Attractions, Places to Visit Shimla, Shimla Sightseeing, Viceregal Lodge, Mall Road Shimla, Kufri"
+      />
       <Hero
         image={IMAGES.heroAttractions}
         title="Explore Shimla"

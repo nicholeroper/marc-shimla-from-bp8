@@ -1,5 +1,5 @@
 import { Star, ExternalLink, Quote } from 'lucide-react';
-import { Hero, SectionHeader } from '../components';
+import { Hero, SectionHeader, SEO } from '../components';
 import { ALL_FIVE_STAR_REVIEWS, GOOGLE_REVIEWS_URL } from '../constants';
 
 const sourceColors: Record<string, string> = {
@@ -48,6 +48,12 @@ function StatsCard({ value, label }: { value: string; label: string }) {
 export default function Reviews() {
   return (
     <div className="min-h-screen bg-stone-50">
+      <SEO
+        title="Hotel Marc Shimla Reviews | Guest Testimonials | Best Rated Hotel"
+        description="Read genuine guest reviews of Hotel Marc Shimla. 4.2 rating with 60+ reviews. See why travelers recommend our hotel for comfort, hospitality, and value in Shimla."
+        canonical="https://marcshimla.in/reviews"
+        keywords="Hotel Marc Reviews, Shimla Hotel Reviews, Guest Testimonials Shimla, Best Rated Hotel Shimla"
+      />
       <Hero
         title="Guest Reviews"
         subtitle="See what our guests say about their stay at Hotel Marc"
