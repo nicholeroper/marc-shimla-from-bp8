@@ -358,7 +358,7 @@ export const IMAGES = {
   heroFacilities: '/facility/facilities-banner.jpg',
   heroContact: '/view1.jpg',
   heroAttractions: '/attractions/banner.jpeg',
-  heroPackages: '/view1.jpg',
+  heroPackages: '/package-images/holidays-package-hero.jpg',
   shimlaValley: '/view1.jpg',
   hotelExterior: '/facade1.jpg',
   dining: '/rest1.jpg',
