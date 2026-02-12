@@ -417,7 +417,7 @@ export const HOLIDAY_PACKAGES: HolidayPackage[] = [
     transportation: 'Private Sedan',
     accommodation: '1 Deluxe Room',
     mealPlan: 'Breakfast & Dinner (Veg)',
-    image: 'https://images.pexels.com/photos/2662116/pexels-photo-2662116.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: '/package-images/shimla-kulu-manali.webp',
     badge: 'popular',
     itinerary: [
       {
@@ -499,7 +499,7 @@ export const HOLIDAY_PACKAGES: HolidayPackage[] = [
     transportation: 'Private Sedan',
     accommodation: '1 Deluxe Room',
     mealPlan: 'Breakfast & Dinner (Veg)',
-    image: 'https://images.pexels.com/photos/1574843/pexels-photo-1574843.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: '/package-images/special-Shimla.jpg',
     itinerary: [
       {
         day: 1,
@@ -553,7 +553,7 @@ export const HOLIDAY_PACKAGES: HolidayPackage[] = [
     transportation: 'Private Sedan',
     accommodation: '1 Deluxe Room',
     mealPlan: 'Breakfast & Dinner (Veg)',
-    image: 'https://images.pexels.com/photos/2387873/pexels-photo-2387873.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: '/package-images/Unforgettable-Shimla.jpg',
     badge: 'bestValue',
     itinerary: [
       {
@@ -617,7 +617,7 @@ export const HOLIDAY_PACKAGES: HolidayPackage[] = [
     transportation: 'Private Sedan',
     accommodation: '1 Deluxe Room',
     mealPlan: 'Breakfast & Dinner (Veg)',
-    image: 'https://images.pexels.com/photos/2104882/pexels-photo-2104882.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: '/package-images/manali-package.jpg',
     itinerary: [
       {
         day: 1,
@@ -671,7 +671,7 @@ export const HOLIDAY_PACKAGES: HolidayPackage[] = [
     transportation: 'Private Sedan',
     accommodation: '1 Deluxe Room',
     mealPlan: 'Breakfast & Dinner (Veg)',
-    image: 'https://images.pexels.com/photos/1666021/pexels-photo-1666021.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: '/package-images/kullu_manali.jpg',
     itinerary: [
       {
         day: 1,
@@ -735,7 +735,7 @@ export const HOLIDAY_PACKAGES: HolidayPackage[] = [
     transportation: 'Private Sedan',
     accommodation: '1 Deluxe Room',
     mealPlan: 'Breakfast & Dinner (Veg)',
-    image: 'https://images.pexels.com/photos/2440021/pexels-photo-2440021.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: '/package-images/shimla-manali.png',
     itinerary: [
       {
         day: 1,
@@ -805,7 +805,7 @@ export const HOLIDAY_PACKAGES: HolidayPackage[] = [
     transportation: 'Private Sedan',
     accommodation: '1 Deluxe Room',
     mealPlan: 'Breakfast & Dinner (Veg)',
-    image: 'https://images.pexels.com/photos/3408353/pexels-photo-3408353.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: '/package-images/shimla-kulu-manali2.webp',
     itinerary: [
       {
         day: 1,
@@ -884,7 +884,7 @@ export const HOLIDAY_PACKAGES: HolidayPackage[] = [
     transportation: 'Private Sedan',
     accommodation: '1 Deluxe Room',
     mealPlan: 'Breakfast & Dinner (Veg)',
-    image: 'https://images.pexels.com/photos/2113566/pexels-photo-2113566.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: '/package-images/heaven-himachal.webp',
     badge: 'new',
     itinerary: [
       {
@@ -989,7 +989,7 @@ export const HOLIDAY_PACKAGES: HolidayPackage[] = [
     transportation: 'Private Sedan',
     accommodation: '1 Deluxe Room',
     mealPlan: 'Breakfast & Dinner (Veg)',
-    image: 'https://images.pexels.com/photos/5370624/pexels-photo-5370624.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: '/package-images/devi-darshan.jpg',
     itinerary: [
       {
         day: 1,
