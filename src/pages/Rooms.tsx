@@ -116,7 +116,7 @@ export function Rooms() {
 
             <div className="relative">
               <img
-                src="/rooms/deluxe-room/deluxe-room3.avif"
+                src="/new-room-images/deluxe-room/0_3_8_deluxe_room_image.jpg"
                 alt="Room interior"
                 className="rounded-xl shadow-2xl w-full ring-4 ring-white/20"
               />
