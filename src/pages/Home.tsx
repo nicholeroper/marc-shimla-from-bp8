@@ -575,11 +575,11 @@ export function Home() {
         <div className="container-custom px-4 sm:px-6 lg:px-8">
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
             <div className="p-6 rounded-xl bg-white/10 backdrop-blur-sm">
-              <p className="text-5xl font-serif font-bold text-white">500+</p>
+              <p className="text-5xl font-serif font-bold text-white">5000+</p>
               <p className="text-white/80 mt-2 font-medium">Happy Guests</p>
             </div>
             <div className="p-6 rounded-xl bg-white/10 backdrop-blur-sm">
-              <p className="text-5xl font-serif font-bold text-white">4.5</p>
+              <p className="text-5xl font-serif font-bold text-white">4.8</p>
               <p className="text-white/80 mt-2 font-medium">Average Rating</p>
             </div>
             <div className="p-6 rounded-xl bg-white/10 backdrop-blur-sm">
