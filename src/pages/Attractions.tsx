@@ -1,7 +1,10 @@
-import { MapPin, Clock, Car, Camera, Mountain, TreePine } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { MapPin, Clock, Car, Camera, Mountain, TreePine, ArrowRight, Calendar } from 'lucide-react';
 import { Hero, SectionHeader, AttractionCard, WeatherWidget, SEO } from '../components';
-import { IMAGES, ATTRACTIONS, getWhatsAppLink, WHATSAPP_MESSAGES } from '../constants';
+import { IMAGES, ATTRACTIONS, getWhatsAppLink, WHATSAPP_MESSAGES, HOLIDAY_PACKAGES } from '../constants';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
+
+const packagesPreview = HOLIDAY_PACKAGES.filter(p => p.badge).slice(0, 3);
 
 const categories = [
   {
@@ -51,6 +54,7 @@ const travelTips = [
 export function Attractions() {
   const categoriesRef = useScrollAnimation<HTMLDivElement>();
   const tipsRef = useScrollAnimation<HTMLDivElement>();
+  const packagesRef = useScrollAnimation<HTMLDivElement>();
 
   return (
     <>
@@ -195,6 +199,73 @@ export function Attractions() {
                 </p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section-padding bg-gradient-to-br from-teal-50 via-white to-emerald-50">
+        <div className="container-custom">
+          <SectionHeader
+            title="Explore with Our Packages"
+            subtitle="Let Marc Holidayers plan your perfect Himachal adventure"
+          />
+
+          <div
+            ref={packagesRef.ref}
+            className={`grid md:grid-cols-3 gap-8 transition-all duration-700 ${
+              packagesRef.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+            }`}
+          >
+            {packagesPreview.map((pkg, index) => (
+              <Link
+                key={pkg.id}
+                to={`/packages/${pkg.id}`}
+                className="group bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 border border-slate-100"
+                style={{ transitionDelay: `${index * 100}ms` }}
+              >
+                <div className="relative h-48 overflow-hidden">
+                  <img
+                    src={pkg.image}
+                    alt={pkg.name}
+                    className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent" />
+                  {pkg.badge && (
+                    <div className={`absolute top-4 right-4 px-3 py-1 rounded-full text-xs font-semibold ${
+                      pkg.badge === 'popular' ? 'bg-rose-500 text-white' :
+                      pkg.badge === 'bestValue' ? 'bg-amber-500 text-white' :
+                      'bg-emerald-500 text-white'
+                    }`}>
+                      {pkg.badge === 'popular' ? 'Popular' : pkg.badge === 'bestValue' ? 'Best Value' : 'New'}
+                    </div>
+                  )}
+                  <div className="absolute bottom-4 left-4 right-4">
+                    <p className="text-emerald-400 text-sm font-medium mb-1">{pkg.duration}</p>
+                    <h3 className="font-serif text-xl text-white font-semibold">{pkg.name}</h3>
+                  </div>
+                </div>
+                <div className="p-5">
+                  <p className="text-slate-600 text-sm mb-4 line-clamp-2">{pkg.tagline}</p>
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-2 text-slate-500 text-sm">
+                      <Calendar className="w-4 h-4" />
+                      <span>{pkg.nights}N / {pkg.days}D</span>
+                    </div>
+                    <span className="text-emerald-600 font-medium text-sm group-hover:text-emerald-700 transition-colors">
+                      View Details
+                      <ArrowRight className="w-4 h-4 inline ml-1" />
+                    </span>
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
+
+          <div className="text-center mt-12">
+            <Link to="/packages" className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-semibold rounded-lg hover:from-emerald-700 hover:to-teal-700 transition-all duration-300 shadow-lg hover:shadow-xl">
+              View All Packages
+              <ArrowRight className="ml-2 w-4 h-4 inline" />
+            </Link>
           </div>
         </div>
       </section>
