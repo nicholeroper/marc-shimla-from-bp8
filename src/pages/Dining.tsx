@@ -1,7 +1,17 @@
-import { Clock, Utensils, Leaf, ChefHat, Coffee, Soup } from 'lucide-react';
+import { useState } from 'react';
+import { Clock, Utensils, Leaf, ChefHat, Coffee, Soup, X } from 'lucide-react';
 import { Hero, SectionHeader, SEO } from '../components';
 import { IMAGES, getWhatsAppLink, WHATSAPP_MESSAGES } from '../constants';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
+
+const restaurantGallery = [
+  { src: '/restaurant-new-images/1_restaurant_image.jpg', alt: 'Marc Kitchen interior' },
+  { src: '/restaurant-new-images/3_restaurant_image.jpg', alt: 'Restaurant dining area' },
+  { src: '/restaurant-new-images/4_restaurant_image.jpg', alt: 'Restaurant seating' },
+  { src: '/restaurant-new-images/6_restaurant_image.jpg', alt: 'Dining ambiance' },
+  { src: '/restaurant-new-images/7_restaurant_image.jpg', alt: 'Restaurant view' },
+  { src: '/restaurant-new-images/8_restaurant_image.jpg', alt: 'Marc Kitchen atmosphere' },
+];
 
 const cuisines = [
   {
@@ -55,6 +65,8 @@ const features = [
 export function Dining() {
   const cuisineRef = useScrollAnimation<HTMLDivElement>();
   const breakfastRef = useScrollAnimation<HTMLDivElement>();
+  const galleryRef = useScrollAnimation<HTMLDivElement>();
+  const [lightboxImage, setLightboxImage] = useState<string | null>(null);
 
   return (
     <>
@@ -172,6 +184,58 @@ export function Dining() {
           </div>
         </div>
       </section>
+
+      <section className="section-padding bg-white">
+        <div className="container-custom">
+          <SectionHeader
+            title="Restaurant Gallery"
+            subtitle="A glimpse of our dining space"
+          />
+
+          <div
+            ref={galleryRef.ref}
+            className={`grid grid-cols-2 md:grid-cols-3 gap-4 transition-all duration-700 ${
+              galleryRef.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+            }`}
+          >
+            {restaurantGallery.map((image, index) => (
+              <div
+                key={index}
+                className="relative aspect-[4/3] overflow-hidden rounded-xl cursor-pointer group"
+                style={{ transitionDelay: `${index * 100}ms` }}
+                onClick={() => setLightboxImage(image.src)}
+              >
+                <img
+                  src={image.src}
+                  alt={image.alt}
+                  className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {lightboxImage && (
+        <div
+          className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4"
+          onClick={() => setLightboxImage(null)}
+        >
+          <button
+            onClick={() => setLightboxImage(null)}
+            className="absolute top-4 right-4 text-white/80 hover:text-white transition-colors"
+          >
+            <X className="w-8 h-8" />
+          </button>
+          <img
+            src={lightboxImage}
+            alt="Restaurant gallery"
+            className="max-w-full max-h-[90vh] object-contain rounded-lg"
+            onClick={(e) => e.stopPropagation()}
+          />
+        </div>
+      )}
 
       <section className="section-padding bg-gradient-to-br from-slate-900 via-slate-800 to-orange-900 text-white">
         <div className="container-custom">
