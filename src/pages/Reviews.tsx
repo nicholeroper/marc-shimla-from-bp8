@@ -50,7 +50,7 @@ export default function Reviews() {
     <div className="min-h-screen bg-stone-50">
       <SEO
         title="Hotel Marc Shimla Reviews | Top Rated Hotel in Shimla | Guest Testimonials"
-        description="Read genuine reviews of Hotel Marc - top rated hotel in Shimla. 4.2 rating with 60+ verified reviews on Google, TripAdvisor & Goibibo. Best value hotel with excellent service, parking & food."
+        description="Read genuine reviews of Hotel Marc - top rated hotel in Shimla. 4.8 rating with 200+ verified reviews on Google, TripAdvisor & Goibibo. Best value hotel with excellent service, parking & food."
         canonical="https://marcshimla.in/reviews"
         keywords="Hotel Marc Reviews, Best Rated Hotel Shimla, Top Rated Shimla Hotels, Shimla Hotel Reviews, Guest Testimonials Shimla, TripAdvisor Shimla Hotels, Google Reviews Shimla Hotel, Recommended Hotels Shimla, Highly Rated Shimla Hotels, Good Reviews Shimla Hotel"
       />
@@ -75,9 +75,9 @@ export default function Reviews() {
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mb-12">
-            <StatsCard value="4.2" label="Average Rating" />
-            <StatsCard value="60+" label="Total Reviews" />
-            <StatsCard value="86%" label="Recommend Us" />
+            <StatsCard value="4.8" label="Average Rating" />
+            <StatsCard value="200+" label="Total Reviews" />
+            <StatsCard value="96%" label="Recommend Us" />
             <StatsCard value="10+" label="Years of Service" />
           </div>
         </div>
