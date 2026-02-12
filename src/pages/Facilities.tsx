@@ -1,7 +1,16 @@
-import { Wifi, Car, MapPin, Shirt, Stethoscope, Zap, Sun, Bell, Shield, Clock, Sparkles, Users } from 'lucide-react';
+import { useState } from 'react';
+import { Wifi, Car, MapPin, Shirt, Stethoscope, Zap, Sun, Bell, Shield, Clock, Sparkles, Users, X } from 'lucide-react';
 import { Hero, SectionHeader, SEO } from '../components';
 import { IMAGES, getWhatsAppLink, WHATSAPP_MESSAGES, HOTEL_INFO } from '../constants';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
+
+const openAreaImages = [
+  { src: '/open-area-images/1_open_area_image.jpg', alt: 'Hotel open terrace' },
+  { src: '/open-area-images/5_open_area_image.jpg', alt: 'Outdoor seating area' },
+  { src: '/open-area-images/6_open_area_image.jpg', alt: 'Scenic outdoor view' },
+  { src: '/open-area-images/7_open_area_image.jpg', alt: 'Mountain view terrace' },
+  { src: '/open-area-images/8_open_area_image.jpg', alt: 'Valley view outdoor' },
+];
 
 const facilities = [
   {
@@ -84,6 +93,8 @@ const services = [
 export function Facilities() {
   const facilitiesRef = useScrollAnimation<HTMLDivElement>();
   const servicesRef = useScrollAnimation<HTMLDivElement>();
+  const outdoorRef = useScrollAnimation<HTMLDivElement>();
+  const [lightboxImage, setLightboxImage] = useState<string | null>(null);
 
   return (
     <>
@@ -225,6 +236,58 @@ export function Facilities() {
           </div>
         </div>
       </section>
+
+      <section className="section-padding bg-gradient-to-br from-teal-50 via-cream-50 to-cyan-50">
+        <div className="container-custom">
+          <SectionHeader
+            title="Open Terrace & Outdoor Areas"
+            subtitle="Enjoy the fresh mountain air and stunning valley views"
+          />
+
+          <div
+            ref={outdoorRef.ref}
+            className={`grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 transition-all duration-700 ${
+              outdoorRef.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+            }`}
+          >
+            {openAreaImages.map((image, index) => (
+              <div
+                key={index}
+                className="relative aspect-square overflow-hidden rounded-xl cursor-pointer group shadow-lg hover:shadow-xl transition-all duration-300"
+                style={{ transitionDelay: `${index * 100}ms` }}
+                onClick={() => setLightboxImage(image.src)}
+              >
+                <img
+                  src={image.src}
+                  alt={image.alt}
+                  className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-teal-900/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {lightboxImage && (
+        <div
+          className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4"
+          onClick={() => setLightboxImage(null)}
+        >
+          <button
+            onClick={() => setLightboxImage(null)}
+            className="absolute top-4 right-4 text-white/80 hover:text-white transition-colors"
+          >
+            <X className="w-8 h-8" />
+          </button>
+          <img
+            src={lightboxImage}
+            alt="Outdoor area"
+            className="max-w-full max-h-[90vh] object-contain rounded-lg"
+            onClick={(e) => e.stopPropagation()}
+          />
+        </div>
+      )}
 
       <section className="section-padding bg-gradient-to-br from-rose-50 via-cream-50 to-amber-50">
         <div className="container-custom">

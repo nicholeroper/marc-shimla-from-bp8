@@ -10,6 +10,7 @@ const galleryCategories = [
   { id: 'views', name: 'Views & Surroundings', color: 'from-sky-500 to-blue-500' },
   { id: 'dining', name: 'Dining', color: 'from-amber-500 to-orange-500' },
   { id: 'hotel', name: 'Hotel', color: 'from-rose-500 to-pink-500' },
+  { id: 'outdoor', name: 'Open Areas', color: 'from-teal-500 to-cyan-500' },
 ];
 
 const galleryImages = [
@@ -43,6 +44,25 @@ const galleryImages = [
   { id: 28, src: '/facility/hotel-mark-parking.jpg', alt: 'Parking facility', category: 'hotel', caption: 'Free secure parking' },
   { id: 29, src: '/about/hotel-marc-our-journey.jpg', alt: 'Our journey', category: 'hotel', caption: 'Hotel Marc - Our Story' },
   { id: 30, src: '/about/hotel-marc-team.jpeg', alt: 'Our team', category: 'hotel', caption: 'The Hotel Marc Team' },
+  { id: 31, src: '/open-area-images/1_open_area_image.jpg', alt: 'Hotel open area', category: 'outdoor', caption: 'Open Terrace & Outdoor Space' },
+  { id: 32, src: '/open-area-images/5_open_area_image.jpg', alt: 'Outdoor seating', category: 'outdoor', caption: 'Relax in the Fresh Mountain Air' },
+  { id: 33, src: '/open-area-images/6_open_area_image.jpg', alt: 'Scenic outdoor view', category: 'outdoor', caption: 'Scenic Views from Open Area' },
+  { id: 34, src: '/open-area-images/7_open_area_image.jpg', alt: 'Mountain view terrace', category: 'outdoor', caption: 'Mountain View Terrace' },
+  { id: 35, src: '/open-area-images/8_open_area_image.jpg', alt: 'Valley view outdoor', category: 'outdoor', caption: 'Valley Views from Hotel' },
+  { id: 36, src: '/restaurant-new-images/1_restaurant_image.jpg', alt: 'Restaurant interior', category: 'dining', caption: 'Marc Kitchen - Cozy Interior' },
+  { id: 37, src: '/restaurant-new-images/3_restaurant_image.jpg', alt: 'Dining area', category: 'dining', caption: 'Comfortable Dining Space' },
+  { id: 38, src: '/restaurant-new-images/4_restaurant_image.jpg', alt: 'Restaurant seating', category: 'dining', caption: 'Restaurant Seating Area' },
+  { id: 39, src: '/restaurant-new-images/6_restaurant_image.jpg', alt: 'Restaurant ambiance', category: 'dining', caption: 'Warm & Welcoming Ambiance' },
+  { id: 40, src: '/restaurant-new-images/7_restaurant_image.jpg', alt: 'Marc Kitchen dining', category: 'dining', caption: 'Dine with a View' },
+  { id: 41, src: '/restaurant-new-images/8_restaurant_image.jpg', alt: 'Restaurant view', category: 'dining', caption: 'Marc Kitchen - Family Dining' },
+  { id: 42, src: '/new-room-images/deluxe-room/0_1_4_deluxe_room_image.jpg', alt: 'Deluxe Room new', category: 'rooms', caption: 'Deluxe Room - Fresh Look' },
+  { id: 43, src: '/new-room-images/deluxe-room/0_2_7_deluxe_room_image.jpg', alt: 'Deluxe Room bed', category: 'rooms', caption: 'Deluxe Room - Comfortable Bed' },
+  { id: 44, src: '/new-room-images/deluxe-room/0_3_8_deluxe_room_image.jpg', alt: 'Deluxe Room amenities', category: 'rooms', caption: 'Deluxe Room - Modern Amenities' },
+  { id: 45, src: '/new-room-images/super-deluxe-room/0_0_6_super_deluxe_room_image.jpg', alt: 'Super Deluxe Room new', category: 'rooms', caption: 'Super Deluxe - Premium Room' },
+  { id: 46, src: '/new-room-images/super-deluxe-room/0_1_5_super_deluxe_room_image.jpg', alt: 'Super Deluxe Room decor', category: 'rooms', caption: 'Super Deluxe - Elegant Decor' },
+  { id: 47, src: '/new-room-images/super-deluxe-room/7_super_deluxe_room_image.jpg', alt: 'Super Deluxe Room window', category: 'rooms', caption: 'Super Deluxe - Valley View Window' },
+  { id: 48, src: '/new-room-images/family-suite/5_family_room_image.jpg', alt: 'Family Suite living', category: 'rooms', caption: 'Family Suite - Living Space' },
+  { id: 49, src: '/new-room-images/family-suite/6_family_room_image.jpg', alt: 'Family Suite comfort', category: 'rooms', caption: 'Family Suite - Home Comfort' },
 ];
 
 export function Gallery() {
