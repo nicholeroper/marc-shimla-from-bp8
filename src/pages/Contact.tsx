@@ -254,12 +254,12 @@ export function Contact() {
                   Call for Pickup
                 </a>
                 <a
-                  href={getWhatsAppLink(WHATSAPP_MESSAGES.booking)}
+                  href={getWhatsAppLink(WHATSAPP_MESSAGES.pickup)}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-center gap-2 w-full bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 text-white py-4 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl"
                 >
-                  Book via WhatsApp
+                  Book Pickup via WhatsApp
                 </a>
               </div>
             </div>

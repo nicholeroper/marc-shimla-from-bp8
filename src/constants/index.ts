@@ -22,6 +22,7 @@ export const WHATSAPP_MESSAGES = {
   facilities: 'Hello! I would like to know more about the facilities at Hotel Marc, Shimla.',
   attractions: 'Hello! I would like to arrange sightseeing from Hotel Marc, Shimla.',
   contact: 'Hello! I have a question about Hotel Marc, Shimla.',
+  pickup: 'Hello! I would like to arrange pickup service from Railway Station/Bus Stand to Hotel Marc, Shimla. Please share the details and charges.',
   packages: (packageName: string) => `Hello! I would like to inquire about the "${packageName}" holiday package from Marc Holidayers.`,
 };
 
