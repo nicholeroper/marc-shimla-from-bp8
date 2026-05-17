@@ -15,6 +15,7 @@ import {
   Shield
 } from 'lucide-react';
 import { HOLIDAY_PACKAGES, MARC_HOLIDAYERS, BOOKING_POLICY, getWhatsAppLink, WHATSAPP_MESSAGES } from '../constants';
+import { SEO } from '../components';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 export function PackageDetail() {
@@ -29,8 +30,56 @@ export function PackageDetail() {
 
   const whatsappMessage = WHATSAPP_MESSAGES.packages(pkg.name);
 
+  const packageStructuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'TouristTrip',
+    'name': `${pkg.name} - ${pkg.tagline}`,
+    'description': pkg.description,
+    'url': `https://marcshimla.in/packages/${pkg.id}`,
+    'image': `https://marcshimla.in${pkg.image}`,
+    'touristType': 'Family, Couple, Adventure',
+    'itinerary': {
+      '@type': 'ItemList',
+      'numberOfItems': pkg.days,
+      'itemListElement': pkg.itinerary.map((day, i) => ({
+        '@type': 'ListItem',
+        'position': i + 1,
+        'name': `Day ${day.day}: ${day.title}`,
+        'description': day.description,
+      })),
+    },
+    'provider': {
+      '@type': 'TravelAgency',
+      'name': 'Marc Holidayers',
+      'url': 'https://marcshimla.in/packages',
+      'telephone': '+918091280700',
+      'address': {
+        '@type': 'PostalAddress',
+        'addressLocality': 'Shimla',
+        'addressRegion': 'Himachal Pradesh',
+        'addressCountry': 'IN',
+      },
+    },
+    'breadcrumb': {
+      '@type': 'BreadcrumbList',
+      'itemListElement': [
+        { '@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': 'https://marcshimla.in/' },
+        { '@type': 'ListItem', 'position': 2, 'name': 'Holiday Packages', 'item': 'https://marcshimla.in/packages' },
+        { '@type': 'ListItem', 'position': 3, 'name': pkg.name, 'item': `https://marcshimla.in/packages/${pkg.id}` },
+      ],
+    },
+  };
+
   return (
     <>
+      <SEO
+        title={`${pkg.name} Tour Package - ${pkg.duration} | Marc Holidayers Shimla`}
+        description={`Book ${pkg.name} (${pkg.duration}) from Marc Holidayers, Shimla. ${pkg.tagline}. Includes ${pkg.mealPlan}. Pickup from ${pkg.pickupDrop}. Himachal Tourism approved. Call +91-8091280700.`}
+        canonical={`https://marcshimla.in/packages/${pkg.id}`}
+        keywords={`${pkg.name} Tour Package, ${pkg.name} Holiday Package, Shimla Tour Package, Himachal Pradesh Tour, Marc Holidayers, Holiday Package Shimla, ${pkg.tagline}`}
+        ogImage={`https://marcshimla.in${pkg.image}`}
+        structuredData={packageStructuredData}
+      />
       <section className="relative min-h-[60vh] flex items-end">
         <div
           className="absolute inset-0 bg-cover bg-center"

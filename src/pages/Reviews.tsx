@@ -45,6 +45,27 @@ function StatsCard({ value, label }: { value: string; label: string }) {
   );
 }
 
+const reviewsStructuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'Hotel',
+  '@id': 'https://marcshimla.in/#hotel',
+  'name': 'Hotel Marc Shimla',
+  'aggregateRating': {
+    '@type': 'AggregateRating',
+    'ratingValue': '4.8',
+    'reviewCount': '200',
+    'bestRating': '5',
+    'worstRating': '1',
+  },
+  'review': ALL_FIVE_STAR_REVIEWS.map((r) => ({
+    '@type': 'Review',
+    'author': { '@type': 'Person', 'name': r.name },
+    'reviewRating': { '@type': 'Rating', 'ratingValue': r.rating, 'bestRating': '5' },
+    'reviewBody': r.review,
+    'publisher': { '@type': 'Organization', 'name': r.source },
+  })),
+};
+
 export default function Reviews() {
   return (
     <div className="min-h-screen bg-stone-50">
@@ -53,6 +74,7 @@ export default function Reviews() {
         description="Read genuine reviews of Hotel Marc - top rated hotel in Shimla. 4.8 rating with 200+ verified reviews on Google, TripAdvisor & Goibibo. Best value hotel with excellent service, parking & food."
         canonical="https://marcshimla.in/reviews"
         keywords="Hotel Marc Reviews, Best Rated Hotel Shimla, Top Rated Shimla Hotels, Shimla Hotel Reviews, Guest Testimonials Shimla, TripAdvisor Shimla Hotels, Google Reviews Shimla Hotel, Recommended Hotels Shimla, Highly Rated Shimla Hotels, Good Reviews Shimla Hotel"
+        structuredData={reviewsStructuredData}
       />
       <Hero
         title="Guest Reviews"

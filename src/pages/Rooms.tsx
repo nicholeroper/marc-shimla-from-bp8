@@ -19,6 +19,31 @@ const commonAmenities = [
   { icon: Coffee, name: 'Room Service', color: 'from-rose-500 to-pink-500' },
 ];
 
+const roomsStructuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'Hotel',
+  '@id': 'https://marcshimla.in/#hotel',
+  'name': 'Hotel Marc Shimla',
+  'containsPlace': ROOMS.map((room) => ({
+    '@type': 'HotelRoom',
+    'name': room.name,
+    'description': room.description,
+    'image': `https://marcshimla.in${room.image}`,
+    'amenityFeature': room.amenities.map((a) => ({
+      '@type': 'LocationFeatureSpecification',
+      'name': a,
+      'value': true,
+    })),
+    'offers': {
+      '@type': 'Offer',
+      'price': room.price,
+      'priceCurrency': 'INR',
+      'availability': 'https://schema.org/InStock',
+      'url': `https://marcshimla.in/rooms#${room.id}`,
+    },
+  })),
+};
+
 export function Rooms() {
   const location = useLocation();
   const policyRef = useScrollAnimation<HTMLDivElement>();
@@ -43,6 +68,8 @@ export function Rooms() {
         description="Book best rooms in Shimla at Hotel Marc. Deluxe rooms, super deluxe rooms & family suites with valley views near Mall Road. Affordable rates, free parking, WiFi. Call 9418385000 for best deals."
         canonical="https://marcshimla.in/rooms"
         keywords="Best Rooms Shimla, Cheap Rooms Shimla, Affordable Rooms Shimla, Valley View Room Shimla, Deluxe Room Shimla, Family Suite Shimla, Hotel Room Booking Shimla, Shimla Room Rates, Budget Room Shimla, Luxury Room Shimla, Room with View Shimla, AC Room Shimla, Heater Room Shimla, Room near Mall Road"
+        ogImage="https://marcshimla.in/new-room-images/super-deluxe-room/0_0_6_super_deluxe_room_image.jpg"
+        structuredData={roomsStructuredData}
       />
       <Hero
         image={IMAGES.heroRooms}
