@@ -27,6 +27,7 @@ const routes = [
   '/packages/devi-darshan',
 ];
 
+
 async function prerender() {
   // Build client
   await build({ configFile: resolve(__dirname, 'vite.config.ts') });
@@ -102,6 +103,14 @@ async function prerender() {
     writeFileSync(filePath, html);
     console.log(`Prerendered: ${route}`);
   }
+
+  // Generate 404.html for GitHub Pages fallback (SPA-style catch-all)
+  const { html: notFoundHtml } = render('/');
+  let html404 = template.replace('<div id="root"></div>', `<div id="root">${notFoundHtml}</div>`);
+  html404 = html404.replace(/<title>[^<]*<\/title>/, '<title>Page Not Found | Hotel Marc Shimla</title>');
+  const notFoundPath = resolve(__dirname, 'dist/404.html');
+  writeFileSync(notFoundPath, html404);
+  console.log('Prerendered: 404.html');
 }
 
 prerender().catch((e) => { console.error(e); process.exit(1); });

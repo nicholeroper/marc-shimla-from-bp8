@@ -32,6 +32,7 @@ function AppContent() {
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/packages" element={<HolidayPackages />} />
           <Route path="/packages/:packageId" element={<PackageDetail />} />
+          <Route path="*" element={<Home />} />
         </Routes>
       </main>
       <Footer />
